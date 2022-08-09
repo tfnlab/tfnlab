@@ -237,10 +237,11 @@ offerPunkForSale = async (punkIndex, punkPrice) => {
       });
 };
 claimPunk = async (mintcount) => {
+  window.alert('Virtual Reality Undeveloped ' + mintcount);
   this.setState({ loading: true });
     this.state.cryptoBoysContract.methods
       .publicSaleMint(mintcount)
-      .send(from: this.state.accountAddress)
+      .send({ from: this.state.accountAddress })
       .on("confirmation", () => {
         localStorage.setItem(this.state.accountAddress, new Date().getTime());
         this.setState({ loading: false });
