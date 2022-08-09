@@ -123,22 +123,11 @@ class App extends Component {
           this.setState({ loading: true });
 
           const { abi } = require('../abis/TFNLab.json');
-          var smart_contract_interface = new web3.eth.Contract(abi, '0x99b65Df25a6c51AF264328bB52384A85bFc02BAb')
+          var smart_contract_interface = new web3.eth.Contract(abi, '0x')
 
 
           const cryptoBoysContract = smart_contract_interface;
-/*
-  	const cryptoBoysMarketContract = web3.eth.Contract(
-            Loot.abi,
-            networkData.address
-          );
-*/
-//    const metaHumanContract = new Contract("0x666659a8ca809c431ce9479a261b9f03cb372016", Metahuman, web3.getSigner())
-//    const metaHumanContract = web3.eth.Contract(Metahuman, );
-//    const balanceOfMH = await metaHumanContract.methods
-//      .balanceOf(this.state.accountAddress)
-//      .call();
-//      window.alert('Balance of MetaHuman' + balanceOfMH);
+
 
           this.setState({ cryptoBoysContract });
 //          this.setState({ cryptoBoysMarketContract });
@@ -163,9 +152,6 @@ class App extends Component {
               this.state.cryptoBoys[i]=0x00;
           }
 
-//          (async () => {
-//              await this.loadMorePunks(0,8000);
-//          })();
 
 
           this.setState({totalTokensOwnedByAccount:this.state.totalTokensOwnedByAccount});

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import queryString from 'query-string'
 import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
@@ -11,90 +10,28 @@ class FormAndPreview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cryptoPunkIndex: "",
-      cryptoBunkImageURL: "/images/punks/punk-0001x8.png",
-      cryptoBoyPrice: "",
-      maxForThisRun: 0,
-      addressTo: "",
-      gasScore: "",
-      gasScoreLot: "",
-      gasScoreHome: "",
-      gasTotal: "",
-      homeStyle: "",
       mintcount: 0,
-      payamount: 0,
     };
   }
 
 
-  Load_New_URL= async (e)=>{
-    var newUrl  = e.target.value;
-    if(newUrl == "Undeveloped"){
-      window.alert('Virtual Reality Undeveloped');
-    }else{
-      const newWindow = window.open(newUrl, '_blank', 'noopener,noreferrer')
-      if (newWindow) newWindow.opener = null
-    }
-  }
 
-  Load_New_URLOpensea= async (e)=>{
-    var newUrl  = e.target.value;
-    if(newUrl == "Unassigned"){
-      window.alert('Home Owner Unassigned');
-    }else{
-      const newWindow = window.open('https://opensea.io/' + newUrl, '_blank', 'noopener,noreferrer')
-      if (newWindow) newWindow.opener = null
-    }
-  }
-
-  Load_New_Image= async (e)=>{
-      this.state.mintcount =e.target.value;
-      this.setState({
-        mintcount : e.target.value
-      })
-  }
-  componentDidMount = async () => {
-
+componentDidMount = async () => {
     window.scrollTo(0, 0);
     console.log(this.props);
-    let punkid = new URLSearchParams(this.props.location.search).get( "punkid" );
-    if(punkid === '' || punkid === null || punkid === undefined)punkid = "1";
-    this.setState({ punkid });
-    //this.props.punksOfferedForSale(punkid);
-
-
-  };
+};
 
 callClaimPunkFromApp = (e) => {
-
     let mintCount = document.getElementById('mintcount').value;
-
     e.preventDefault();
       this.props.claimPunk(
         mintCount
       );
-  };
-
-  callClaimPunkFromAppwl = (e) => {
-    let mintPrice = document.getElementById('mintamountwl').value;
-      e.preventDefault();
-        this.props.claimPunkwl(
-          mintPrice
-        );
-    };
-
+};
 
 
 
   render() {
-
-    //const elements = this.props.cryptoBoys;
-
-    const items = []
-    const itemsHomes = []
-    const itemsBottomHomes = []
-    const itemsBottom = []
-
     return (
       <div>
 
@@ -120,9 +57,6 @@ callClaimPunkFromApp = (e) => {
                 id="mintcount"
                 className="form-control"
                 placeholder="Mint Count"
-                onChange={(e) =>
-                  this.Load_New_Image(e)
-                }
               />
             </div>
 
