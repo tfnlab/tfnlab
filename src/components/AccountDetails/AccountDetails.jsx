@@ -8,7 +8,7 @@ const AccountDetails = ({ accountAddress, accountBalance }) => {
         <div class="card col-md-12" >
           <div class="card-body">
             <h4>We make art NFT collectables</h4>
-            <img src="images/parts/body/0.png" style={{ height: '80%', width: '80%', justify-content: 'center'  }}/>
+            <img src="images/parts/body/0.png" style={{ height: '80%', width: '80%'}}/>
           </div>
         </div>
       </div>
