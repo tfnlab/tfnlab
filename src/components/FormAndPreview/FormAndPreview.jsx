@@ -66,9 +66,12 @@ class FormAndPreview extends Component {
   };
 
 callClaimPunkFromApp = (e) => {
+
+    let mintCount = document.getElementById('mintcount').value;
+
     e.preventDefault();
       this.props.claimPunk(
-        this.state.mintcount
+        mintCount
       );
   };
 
@@ -139,7 +142,7 @@ callClaimPunkFromApp = (e) => {
         </form>
 
           <hr className="my-4" />
-              Astgik &copy; 2022. All rights reserved.
+              TFNLab &copy; 2022. All rights reserved.
           <hr className="my-4" />
       </div>
     );
