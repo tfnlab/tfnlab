@@ -123,7 +123,7 @@ class App extends Component {
           this.setState({ loading: true });
 
           const { abi } = require('../abis/TFNLab.json');
-          var smart_contract_interface = new web3.eth.Contract(abi, '0x')
+          var smart_contract_interface = new web3.eth.Contract(abi, '0xA881BF6e9618Ac86502a64E83010C88869aa0D97')
 
 
           const cryptoBoysContract = smart_contract_interface;
