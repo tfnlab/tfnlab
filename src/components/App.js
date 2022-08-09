@@ -430,76 +430,7 @@ getPunkOwner = async (punkIndex) => {
                     claimPunkwl={this.claimPunkwl}
                     />
                   )}
-              />
-              <Route
-                path="/marketplace"
-                render={(props) => (
-                  <AllCryptoBoys
-                    {...props}
-                    accountAddress={this.state.accountAddress}
-                    cryptoBoys={this.state.cryptoBoys}
-                    totalTokensMinted={this.state.totalTokensMinted}
-                    changeTokenPrice={this.changeTokenPrice}
-                    toggleForSale={this.toggleForSale}
-                    buyCryptoBoy={this.buyCryptoBoy}
-                    loadMorePunks={this.loadMorePunks}
-                    currentPage={this.state.currentPage}
-                  />
-                )}
-              />
-              <Route
-                path="/my-tokens"
-                render={() => (
-                  <MyCryptoBoys
-                    loadMorePunks={this.state.loadMorePunks}
-                    accountAddress={this.state.accountAddress}
-                    cryptoBoys={this.state.cryptoBoys}
-                    balanceOf={this.state.balanceOf}
-                    selectedpunkid={this.state.selectedpunkid}
-                    totalTokensOwnedByAccount={
-                      this.state.totalTokensOwnedByAccount
-                    }
-                  />
-                )}
-              />
-              <Route
-                path="/forsale"
-                render={() => (
-                  <PunksForSale
-                    accountAddress={this.state.accountAddress}
-                    cryptoBoysForSale={this.state.cryptoBoysForSale}
-                    totalTokensMinted={this.state.totalTokensMinted}
-                    changeTokenPrice={this.changeTokenPrice}
-                    toggleForSale={this.toggleForSale}
-                    buyCryptoBoy={this.buyCryptoBoy}
-                    loadMorePunks={this.loadMorePunks}
-                    loadPunksForSale={this.loadPunksForSale}
-                    punksforsalebuttonhtml={this.state.punksforsalebuttonhtml}
-                  />
-                )}
-              />
-              <Route
-                path="/buypunk"
-                render={(props) => (
-                  <BuyPunk
-                    {...props}
-                    mintMyNFT={this.mintMyNFT}
-                    buyPunk={this.buyPunk}
-                    reservePunksForOwner={this.reservePunksForOwner}
-                    offerPunkForSale={this.offerPunkForSale}
-                    claimPunk={this.claimPunk}
-                    transferPunk={this.transferPunk}
-                    nameIsUsed={this.state.nameIsUsed}
-                    colorIsUsed={this.state.colorIsUsed}
-                    colorsUsed={this.state.colorsUsed}
-                    setMintBtnTimer={this.setMintBtnTimer}
-                    punksOfferedForSale={this.punksOfferedForSale}
-                    cryptoBoyPrice={this.state.cryptoBoyPrice}
-                    getPunkOwner={this.getPunkOwner}
-                    getMyPunks={this.getMyPunks}
-                    />
-                  )}
-              />
+              />                
               <Route path='/nftrade' component={() => {
                    window.location.href = 'https://opensea.io/collection/tfnlab';
                    return null;
