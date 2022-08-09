@@ -240,7 +240,7 @@ claimPunk = async (mintcount) => {
   this.setState({ loading: true });
     this.state.cryptoBoysContract.methods
       .publicSaleMint(mintcount)
-      .send({ from: this.state.accountAddress })
+      .send(from: this.state.accountAddress)
       .on("confirmation", () => {
         localStorage.setItem(this.state.accountAddress, new Date().getTime());
         this.setState({ loading: false });
@@ -430,7 +430,7 @@ getPunkOwner = async (punkIndex) => {
                     claimPunkwl={this.claimPunkwl}
                     />
                   )}
-              />                
+              />
               <Route path='/nftrade' component={() => {
                    window.location.href = 'https://opensea.io/collection/tfnlab';
                    return null;
