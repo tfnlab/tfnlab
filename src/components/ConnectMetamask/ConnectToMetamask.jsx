@@ -11,7 +11,10 @@ const ConnectToMetamask = ({ connectToMetamask }) => {
         </h1>
         <p>Own a piece of digital art that is completely unique and one of a kind.</p>
         <hr className="my-4" />
-        <a href="https://opensea.io/collection/microgreens0x" ><img class="img-fluid" src="/images/main.logo.gif" style={{ height: '100%', width: '100%'}} /></a>
+        <a href="https://play.tfnlab.com" >Play.tfnlab.com</a>
+        <p>Download a print-ready high-resolution 1500 x 1500 resolution image</p>
+        <hr className="my-4" />
+        <a href="https://opensea.io/collection/tfnlab" ><img class="img-fluid" src="/images/main.logo.gif" style={{ height: '100%', width: '100%'}} /></a>
 
         <hr className="my-4" />
         <button
